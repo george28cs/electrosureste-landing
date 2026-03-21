@@ -10,12 +10,13 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const assetBase = import.meta.env.BASE_URL;
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b bg-background/80 backdrop-blur-lg">
       <div className="container section-padding flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2 font-bold text-lg">
-          <img src="/bitmap-header.svg" alt="RFT Soluciones" className="h-11 w-auto object-contain" />
+          <img src={`${assetBase}bitmap-header.svg`} alt="RFT Soluciones" className="h-11 w-auto object-contain" />
           RFT Soluciones
         </a>
 

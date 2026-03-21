@@ -23,6 +23,8 @@ const reasons = [
 ];
 
 const WhyUsSection = () => {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <section className="bg-background py-24 lg:py-32">
       <div className="container section-padding">
@@ -36,7 +38,7 @@ const WhyUsSection = () => {
         <ScrollReveal delay={100}>
           <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-[2rem] border bg-card p-3 shadow-xl">
             <img
-              src="/3.PNG"
+              src={`${assetBase}3.PNG`}
               alt="Operacion y servicio tecnico de RFT Soluciones"
               className="aspect-square w-full rounded-[1.4rem] object-cover"
             />

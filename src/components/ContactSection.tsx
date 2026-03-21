@@ -16,6 +16,7 @@ const phoneRegex = /^\d{10}$/;
 
 const ContactSection = () => {
   const [state, submitToFormspree] = useForm("mwvrzynp");
+  const assetBase = import.meta.env.BASE_URL;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -133,7 +134,7 @@ const ContactSection = () => {
 
               <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-[2rem] border bg-background p-3 shadow-xl md:mx-0 md:flex-shrink-0">
                 <img
-                  src="/4.PNG"
+                  src={`${assetBase}4.PNG`}
                   alt="Atencion y soporte tecnico de RFT Soluciones"
                   className="aspect-square w-full rounded-[1.4rem] object-cover"
                 />

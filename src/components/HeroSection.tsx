@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Zap } from "lucide-react";
 
 const HeroSection = () => {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-primary">
       <div
@@ -73,7 +75,7 @@ const HeroSection = () => {
             <div className="absolute -inset-6 rounded-[2rem] bg-accent/15 blur-3xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/20 backdrop-blur-sm">
               <img
-                src="/1.PNG"
+                src={`${assetBase}1.PNG`}
                 alt="Trabajo industrial de RFT Soluciones"
                 className="aspect-square w-full rounded-[1.4rem] object-cover"
               />

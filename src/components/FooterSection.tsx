@@ -1,11 +1,13 @@
 const FooterSection = () => {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <footer className="bg-primary py-16 text-primary-foreground/70">
       <div className="container section-padding">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 text-lg font-bold text-primary-foreground">
-              <img src="/bitmap-footer.svg" alt="RFT Soluciones" className="h-10 w-auto object-contain" />
+              <img src={`${assetBase}bitmap-footer.svg`} alt="RFT Soluciones" className="h-10 w-auto object-contain" />
               RFT Soluciones
             </div>
             <p className="mt-3 text-sm leading-relaxed">

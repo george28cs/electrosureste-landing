@@ -9,6 +9,8 @@ const highlights = [
 ];
 
 const AboutSection = () => {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <section id="nosotros" className="bg-muted/50 py-24 lg:py-32">
       <div className="container section-padding">
@@ -38,7 +40,7 @@ const AboutSection = () => {
             <div className="space-y-6">
               <div className="overflow-hidden rounded-[2rem] border bg-background p-3 shadow-xl">
                 <img
-                  src="/2.PNG"
+                  src={`${assetBase}2.PNG`}
                   alt="Equipo y trabajo de campo de RFT Soluciones"
                   className="aspect-square w-full rounded-[1.4rem] object-cover"
                 />
