@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --header-offset: 5rem;
     --background: 0 0% 100%;
     --foreground: 213 75% 17%;
 
@@ -50,8 +51,17 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-offset);
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  section[id] {
+    scroll-margin-top: var(--header-offset);
   }
 
   h1, h2, h3, h4, h5, h6 {

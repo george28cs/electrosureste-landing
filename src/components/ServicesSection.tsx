@@ -38,13 +38,13 @@ const ServicesSection = () => {
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
-            <ScrollReveal key={service.title} delay={i * 80}>
-              <div className="group relative rounded-xl border bg-card p-8 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 hover:-translate-y-1">
-                <div className="mb-5 inline-flex rounded-lg bg-accent/10 p-3 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+            <ScrollReveal key={service.title} delay={i * 80} className="h-full">
+              <div className="group relative flex h-full flex-col rounded-xl border bg-card p-8 transition-all duration-200 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-2xl hover:shadow-accent/15">
+                <div className="mb-5 inline-flex rounded-lg bg-accent/10 p-3 text-accent transition-all duration-200 group-hover:-translate-y-0.5 group-hover:bg-accent/15 group-hover:text-accent/80">
                   <service.icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-semibold leading-snug">{service.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.description}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{service.description}</p>
               </div>
             </ScrollReveal>
           ))}

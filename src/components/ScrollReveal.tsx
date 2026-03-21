@@ -29,8 +29,8 @@ const ScrollReveal = ({ children, className, delay = 0 }: ScrollRevealProps) => 
     <div
       ref={ref}
       className={cn(
-        "opacity-0",
-        isVisible && "animate-fade-up",
+        "translate-y-8 opacity-0 transition-all duration-500 ease-out motion-reduce:translate-y-0 motion-reduce:transition-none",
+        isVisible && "translate-y-0 opacity-100",
         className
       )}
       style={{ animationDelay: `${delay}ms` }}

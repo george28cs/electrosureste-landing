@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Zap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "#servicios", label: "Servicios" },
@@ -15,8 +15,8 @@ const Navbar = () => {
     <nav className="fixed top-0 z-50 w-full border-b bg-background/80 backdrop-blur-lg">
       <div className="container section-padding flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2 font-bold text-lg">
-          <Zap className="h-5 w-5 text-accent" />
-          ElectroSureste
+          <img src="/bitmap-header.svg" alt="RFT Soluciones" className="h-11 w-auto object-contain" />
+          RFT Soluciones
         </a>
 
         {/* Desktop */}
