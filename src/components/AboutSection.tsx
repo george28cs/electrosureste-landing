@@ -74,7 +74,7 @@ const AboutSection = () => {
                 </div>
               </div>
 
-              <StaggerReveal className="grid grid-cols-2 gap-4" staggerMs={100}>
+              <StaggerReveal className="mt-12 grid grid-cols-2 gap-4" staggerMs={100}>
                 {highlights.map((item) => (
                   <div
                     key={item.label}

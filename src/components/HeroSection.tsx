@@ -73,8 +73,8 @@ const HeroSection = () => {
                 Más de 4 años de experiencia
               </div>
               <div>
-                <span className="block text-2xl font-bold tabular-nums text-primary-foreground">4</span>
-                Estados con presencia
+                <span className="block text-2xl font-bold tabular-nums text-primary-foreground">+30</span>
+                Servicios completados
               </div>
               <div>
                 <span className="block text-2xl font-bold tabular-nums text-primary-foreground">24/7</span>
