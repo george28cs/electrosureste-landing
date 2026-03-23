@@ -1,24 +1,24 @@
 import { BadgeCheck, Timer, Globe } from "lucide-react";
-import ScrollReveal from "./ScrollReveal";
+import StaggerReveal from "./StaggerReveal";
 
 const reasons = [
   {
     icon: BadgeCheck,
-    title: "Tecnicos certificados",
+    title: "Experiencia enfocada en industria",
     description:
-      "Nuestro equipo cuenta con certificaciones oficiales y capacitacion continua en las ultimas tecnologias electromecanicas.",
+      "Trabajamos con enfoque operativo, conocimiento técnico y experiencia en entornos industriales del sureste.",
   },
   {
     icon: Timer,
-    title: "Respuesta en menos de 4 horas",
+    title: "Atención oportuna y seguimiento",
     description:
-      "Ante cualquier emergencia, garantizamos presencia tecnica en su instalacion en un maximo de 4 horas.",
+      "Damos respuesta con seriedad, comunicación clara y seguimiento continuo para cada necesidad del cliente.",
   },
   {
     icon: Globe,
-    title: "Disponibilidad 24/7 en toda la region",
+    title: "Cobertura regional",
     description:
-      "Cobertura completa en toda la zona sureste del pais con guardias permanentes y unidades de servicio equipadas.",
+      "Atendemos proyectos y servicios en Veracruz, Tabasco, Campeche y Yucatán desde nuestra base en Coatzacoalcos.",
   },
 ];
 
@@ -28,36 +28,42 @@ const WhyUsSection = () => {
   return (
     <section className="bg-background py-24 lg:py-32">
       <div className="container section-padding">
-        <ScrollReveal>
+        <StaggerReveal staggerMs={100}>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Por que elegirnos</p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">La diferencia esta en el servicio</h2>
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Por qué elegirnos</p>
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Un aliado confiable para su operación</h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              Nos enfocamos en resolver con orden, responsabilidad y criterio técnico, manteniendo
+              una relación cercana con cada cliente.
+            </p>
           </div>
-        </ScrollReveal>
 
-        <ScrollReveal delay={100}>
-          <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-[2rem] border bg-card p-3 shadow-xl">
-            <img
-              src={`${assetBase}3.PNG`}
-              alt="Operacion y servicio tecnico de RFT Soluciones"
-              className="aspect-square w-full rounded-[1.4rem] object-cover"
-            />
+          <div className="group mx-auto mt-12 max-w-4xl overflow-hidden rounded-[2rem] border bg-card p-3 shadow-xl">
+            <div className="overflow-hidden rounded-[1.4rem]">
+              <img
+                src={`${assetBase}4.JPG`}
+                alt="Operación y servicio técnico de RFT Soluciones"
+                className="aspect-square w-full object-cover transition-transform ease-out group-hover:scale-105"
+                style={{ transitionDuration: "400ms" }}
+              />
+            </div>
           </div>
-        </ScrollReveal>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-3">
-          {reasons.map((reason, i) => (
-            <ScrollReveal key={reason.title} delay={i * 100}>
-              <div className="group rounded-xl border bg-card p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5">
+          <StaggerReveal className="mt-16 grid gap-8 sm:grid-cols-3" staggerMs={100}>
+            {reasons.map((reason) => (
+              <div
+                key={reason.title}
+                className="group rounded-xl border bg-card p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5"
+              >
                 <div className="mx-auto mb-6 inline-flex rounded-full bg-primary p-4 text-primary-foreground transition-colors group-hover:bg-accent">
                   <reason.icon className="h-7 w-7" />
                 </div>
                 <h3 className="text-xl font-semibold">{reason.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{reason.description}</p>
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
+            ))}
+          </StaggerReveal>
+        </StaggerReveal>
       </div>
     </section>
   );

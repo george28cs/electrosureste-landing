@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, Phone, Mail } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import StaggerReveal from "./StaggerReveal";
 
 const errorMessageMap: Record<string, string> = {
   TYPE_EMAIL: "Ingresa un correo valido.",
@@ -104,42 +105,55 @@ const ContactSection = () => {
       <div className="container section-padding">
         <div className="grid gap-16 lg:grid-cols-2">
           <ScrollReveal>
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Contacto</p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Solicite su presupuesto sin compromiso</h2>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              Cuentenos sobre su proyecto o necesidad y nuestro equipo se pondra en contacto con usted a la brevedad.
-            </p>
+            <StaggerReveal staggerMs={100}>
+              <p className="text-sm font-semibold uppercase tracking-widest text-accent">Contacto</p>
+              <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Solicite su presupuesto sin compromiso</h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Cuentenos sobre su proyecto o necesidad y nuestro equipo se pondra en contacto con usted a la brevedad.
+              </p>
 
-            <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-              <div className="space-y-5">
-                <div className="flex items-center gap-4">
-                  <div className="rounded-lg bg-accent/10 p-3 text-accent">
-                    <Phone className="h-5 w-5" />
+              <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+                <div className="space-y-5">
+                  <div className="flex items-center gap-4">
+                    <div className="rounded-lg bg-accent/10 p-3 text-accent">
+                      <Phone className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Telefono</p>
+                      <p className="font-medium">921 109 3848</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Telefono</p>
-                    <p className="font-medium">+52 (999) 123-4567</p>
+                  <div className="flex items-center gap-4">
+                    <div className="rounded-lg bg-accent/10 p-3 text-accent">
+                      <Mail className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Email</p>
+                      <p className="font-medium">rftsoluciones@gmail.com</p>
+                    </div>
+                  </div>
+                  <div className="pl-[52px]">
+                    <p className="text-sm text-muted-foreground">Dirección</p>
+                    <p className="font-medium">
+                      Independencia #88, Colonia Libertad
+                      <br />
+                      Villa Allende, Coatzacoalcos, C.P. 96380
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="rounded-lg bg-accent/10 p-3 text-accent">
-                    <Mail className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium">contacto@rftservicios.com</p>
+
+                <div className="group mx-auto w-full max-w-[220px] overflow-hidden rounded-[2rem] border bg-background p-3 shadow-xl md:mx-0 md:flex-shrink-0">
+                  <div className="overflow-hidden rounded-[1.4rem]">
+                    <img
+                      src={`${assetBase}2.JPG`}
+                      alt="Atención y soporte técnico de RFT Soluciones"
+                      className="aspect-square w-full object-cover transition-transform ease-out group-hover:scale-105"
+                      style={{ transitionDuration: "400ms" }}
+                    />
                   </div>
                 </div>
               </div>
-
-              <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-[2rem] border bg-background p-3 shadow-xl md:mx-0 md:flex-shrink-0">
-                <img
-                  src={`${assetBase}4.PNG`}
-                  alt="Atencion y soporte tecnico de RFT Soluciones"
-                  className="aspect-square w-full rounded-[1.4rem] object-cover"
-                />
-              </div>
-            </div>
+            </StaggerReveal>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>

@@ -18,29 +18,33 @@ const FooterSection = () => {
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground">Dirección</h4>
             <p className="text-sm leading-relaxed">
-              Coatzacoalcos, Veracruz México<br />
+              Independencia #88, Colonia Libertad
+              <br />
+              Villa Allende, Coatzacoalcos, C.P. 96380
             </p>
           </div>
 
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground">Contacto</h4>
             <p className="text-sm leading-relaxed">
-              contacto@rftservicios.com<br />
-              +52 (999) 123-4567
+              rftsoluciones@gmail.com
+              <br />
+              921 109 3848
             </p>
           </div>
 
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground">Horario</h4>
             <p className="text-sm leading-relaxed">
-              Lunes a Viernes: 8:00 – 18:00<br />
+              Lunes a Viernes: 8:00 - 18:00
+              <br />
               Emergencias: 24/7
             </p>
           </div>
         </div>
 
         <div className="mt-12 border-t border-primary-foreground/10 pt-8 text-center text-xs">
-          © {new Date().getFullYear()} RFT Soluciones. Todos los derechos reservados.
+          Copyright {new Date().getFullYear()} RFT Soluciones. Todos los derechos reservados.
         </div>
       </div>
     </footer>
